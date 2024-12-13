@@ -315,7 +315,7 @@ button {
     }
 
     body {
-        padding-top: 14rem;
+        padding-top: 16rem;
         padding-bottom: 16rem;
         overflow: auto;
     }
@@ -327,8 +327,8 @@ button {
         max-width: 50rem;
         width: 46rem;
         height: 32rem;
-        margin-top: -1rem;
-        margin-left: 20rem;
+        margin-top: 2rem;
+        margin-left: 22rem;
         padding-right: 5rem;
         border-radius: 1rem;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
