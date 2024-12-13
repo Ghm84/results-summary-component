@@ -1,0 +1,532 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(0, 0%, 100%);
+    overflow: auto;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    max-width: 30rem;
+    width: 24rem;
+    font-family: "Hanken Grotesk";
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    max-width: 30rem;
+    width: 23.5rem;
+}
+
+.score-div {
+    background-color: hsl(241, 81%, 54%);
+    max-width: 100%;
+    width: 100%;
+    max-height: 100%;
+    height: 15%;
+    padding-left: 3rem;
+    padding-bottom: 3rem;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+}
+
+.result {
+    color: hsl(221, 100%, 96%);
+    opacity: 0.8;
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-top: 2rem;
+    margin-left: 6rem;
+}
+
+.score-circle {
+    background-color: hsla(256, 72%, 46%, 1);
+    max-width: 20rem;
+    width: 9rem;
+    max-height: 10rem;
+    height: 9rem;
+    margin-top: 2rem;
+    margin-left: 4.5rem;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.seventy-six {
+    color: hsl(0, 0%, 100%);
+    font-size: 4rem;
+    font-weight: 800;
+    padding-top: 0.5rem;
+}
+
+.one-hundred {
+    color: hsl(241, 100%, 89%);
+    font-size: 1rem;
+    font-weight: 700;
+    margin-left: -0.25rem;
+}
+
+.great {
+    color: hsl(0, 0%, 100%);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 3rem;
+    margin-left: 6.75rem;
+}
+
+.comparative {
+    color: hsl(241, 100%, 89%);
+    opacity: 0.6;
+    width: 17rem;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: left;
+    margin-top: 1rem;
+    margin-left: 1.2rem;
+}
+
+.summary-div {
+    max-width: 100%;
+    width: 100%;
+    max-height: 100%;
+    height: 15%;
+    padding-top: 1rem;
+    margin-left: 2rem;
+}
+
+.summary-title {
+    color: hsl(224, 30%, 27%);
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.reaction-div {
+    background-color: hsla(0, 100%, 67%, 0.08);
+    opacity: 0.8;
+    max-width: 100%;
+    width: 80%;
+    max-height: 100%;
+    height: 25%;
+    padding-top: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 2rem;
+    align-items: center;
+    border-top: 5rem hsl(0, 100%, 67%);
+    border-bottom: 5rem hsl(0, 100%, 67%);
+    border-left: none;
+    border-right: none;
+    border-radius: 1rem;
+}
+
+.reaction-icon {
+    position: absolute;
+    margin-top: -0.8rem;
+    margin-left: 0.15rem;
+}
+
+.reaction-title {
+    color: hsl(0, 100%, 67%);
+    position: absolute;
+    max-width: 5rem;
+    width: 5rem;
+    margin-top: -0.7rem;
+    margin-left: 2rem;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.reaction-score {
+    color: hsl(222, 5%, 59%);
+    margin-top: -0.6rem;
+    font-size: 1rem;
+    font-weight: 700;
+    padding-right: 1rem;
+    float: right;
+}
+
+.partial-score {
+    color: hsl(224, 30%, 27%);
+    font-size: 1rem;
+    font-weight: 800;
+    padding-right: 0.2rem;
+}
+
+.memory-div {
+    background-color: hsla(39, 100%, 56%, 0.08);
+    opacity: 0.8;
+    max-width: 100%;
+    width: 80%;
+    max-height: 100%;
+    height: 25%;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 2rem;
+    border-radius: 1rem;
+}
+
+.memory-icon {
+    position: absolute;
+    margin-top: -0.8rem;
+    margin-left: 0.15rem;
+}
+
+.memory-title {
+    color: hsl(39, 100%, 56%);
+    position: absolute;
+    max-width: 5rem;
+    width: 5rem;
+    margin-top: -0.7rem;
+    margin-left: 2rem;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.memory-score {
+    color: hsl(222, 5%, 59%);
+    margin-top: -0.6rem;
+    font-size: 1rem;
+    font-weight: 700;
+    padding-right: 1rem;
+    float: right;
+}
+
+.verbal-div {
+    background-color: hsla(166, 100%, 37%, 0.06);
+    opacity: 0.8;
+    max-width: 100%;
+    width: 80%;
+    max-height: 100%;
+    height: 25%;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 2rem;
+    border-radius: 1rem;
+}
+
+.verbal-icon {
+    position: absolute;
+    margin-top: -0.8rem;
+    margin-left: 0.15rem;
+}
+
+.verbal-title {
+    color: hsl(166, 100%, 37%);
+    position: absolute;
+    max-width: 5rem;
+    width: 5rem;
+    margin-top: -0.7rem;
+    margin-left: 2rem;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.verbal-score {
+    color: hsl(222, 5%, 59%);
+    margin-top: -0.6rem;
+    font-size: 1rem;
+    font-weight: 700;
+    padding-right: 1rem;
+    float: right;
+}
+
+.visual-div {
+    background-color: hsla(234, 85%, 45%, 0.06);
+    opacity: 0.8;
+    max-width: 100%;
+    width: 80%;
+    max-height: 100%;
+    height: 25%;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 2rem;
+    border-radius: 1rem;
+}
+
+.visual-icon {
+    position: absolute;
+    margin-top: -0.8rem;
+    margin-left: 0.15rem;
+}
+
+.visual-title {
+    color: hsl(234, 85%, 45%);
+    position: absolute;
+    max-width: 5rem;
+    width: 5rem;
+    margin-top: -0.7rem;
+    margin-left: 2rem;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.visual-score {
+    color: hsl(222, 5%, 59%);
+    margin-top: -0.6rem;
+    font-size: 1rem;
+    font-weight: 700;
+    padding-right: 1rem;
+    float: right;
+}
+
+.button-div {
+    max-width: 100%;
+    width: 100%;
+    margin-left: 1.75rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+button {
+    background-color: hsl(224, 30%, 27%);
+    color: hsl(0, 0%, 100%);
+    max-width: 20rem;
+    width: 19rem;
+    padding-top: 1rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-bottom: 1rem;
+    border: none;
+    border-radius: 3rem;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 600px) {
+    
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        padding-top: 14rem;
+        padding-bottom: 16rem;
+        overflow: auto;
+    }
+
+    .card {
+        background-color: hsl(0, 0%, 100%);
+        display: flex;
+        flex-direction: row;
+        max-width: 50rem;
+        width: 46rem;
+        height: 32rem;
+        margin-top: -1rem;
+        margin-left: 20rem;
+        padding-right: 5rem;
+        border-radius: 1rem;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .container {
+        display: flex;
+        flex-direction: row;
+        max-width: 47rem;
+        width: 46rem;
+        margin: 0;
+    }
+
+    .score-div {
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+        width: 100%;
+        height: 100%;
+        margin-left: -1rem;
+        padding-top: 0;
+        padding-left: 2rem;
+        padding-right: 3rem;
+        border-radius: 2rem;
+    }
+
+    .result {
+        font-size: 1.5rem;
+        margin-top: 2rem;
+        margin-left: 6rem;
+    }
+
+    .score-circle {
+        max-width: 20rem;
+        width: 12rem;
+        max-height: 25rem;
+        height: 12rem;
+        margin-top: 0.85rem;
+        margin-left: 3.75rem;
+        align-content: center;
+        object-fit: contain;
+    }
+
+    .great {
+        font-size: 1.95rem;
+        margin-left: 6.75rem;
+    }
+
+    .comparative {
+        opacity: 1;
+        max-width: 20rem;
+        width: 16rem;
+        font-size: 1.1rem;
+        text-align: center;
+        line-height: 1.5rem;
+        margin-top: 1rem;
+        margin-left: 1.5rem;
+    }
+
+    .summary-div {
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+        width: 100%;
+        margin-top: 0.25rem;
+        padding-left: 2rem;
+        padding-right: 0;
+        margin-left: 1rem;
+    }
+
+    .summary-title {
+        font-size: 1.5rem;
+        margin-top: 0.5rem;
+    }
+
+    .reaction-div {
+        max-width: 20rem;
+        width: 19rem;
+        margin-top: 1rem;
+        padding-top: 1.85rem;
+        padding-bottom: 1.85rem;
+    }
+
+    .reaction-icon {
+        margin-top: -0.45rem;
+    }
+
+    .reaction-title {
+        color: hsl(0, 100%, 67%);
+        opacity: 1;
+        font-size: 1.1rem;
+        margin-top: -0.45rem;
+        padding-left: 0.25rem;
+    }
+
+    .reaction-score {
+        font-size: 1.15rem;
+        margin-top: -0.45rem;
+    }
+
+    .partial-score {
+        color: hsl(224, 30%, 27%);
+        font-size: 1.2rem;
+        font-weight: 700;
+        padding-right: 0.2rem;
+    }
+
+    .memory-div {
+        max-width: 20rem;
+        width: 19rem;
+        margin-top: 1rem;
+        padding-top: 1.85rem;
+        padding-bottom: 1.85rem;
+    }
+
+    .memory-icon {
+        margin-top: -0.45rem;
+    }
+
+    .memory-title {
+        color: hsl(39, 100%, 56%);
+        opacity: 1;
+        font-size: 1.1rem;
+        margin-top: -0.45rem;
+        padding-left: 0.25rem;
+    }
+
+    .memory-score {
+        font-size: 1.15rem;
+        margin-top: -0.45rem;
+    }
+
+    .verbal-div {
+        max-width: 20rem;
+        width: 19rem;
+        margin-top: 1rem;
+        padding-top: 1.85rem;
+        padding-bottom: 1.85rem;
+    }
+
+    .verbal-icon {
+        margin-top: -0.45rem;
+    }
+
+    .verbal-title {
+        color: hsl(166, 100%, 37%);
+        opacity: 1;
+        font-size: 1.1rem;
+        margin-top: -0.45rem;
+        padding-left: 0.25rem;
+    }
+
+    .verbal-score {
+        font-size: 1.15rem;
+        margin-top: -0.45rem;
+    }
+
+    .visual-div {
+        max-width: 20rem;
+        width: 19rem;
+        margin-top: 1rem;
+        padding-top: 1.85rem;
+        padding-bottom: 1.85rem;
+    }
+
+    .visual-icon {
+        margin-top: -0.7rem;
+        margin-top: -0.45rem;
+    }
+
+    .visual-title {
+        color: hsl(234, 85%, 50%);
+        opacity: 1;
+        font-size: 1.1rem;
+        margin-top: -0.45rem;
+        padding-left: 0.25rem;
+    }
+
+    .visual-score {
+        font-size: 1.15rem;
+        margin-top: -0.45rem;
+    }
+
+    .button-div {
+        position: absolute;
+        margin-top: 24rem;
+        margin-left: 24.25rem;
+        padding-right: 5rem;
+        padding-bottom: 1rem;
+    }
+
+    button {
+        padding-top: 1.25rem;
+        padding-bottom: 1.25rem;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: hsl(241, 81%, 54%);
+    }
+}
